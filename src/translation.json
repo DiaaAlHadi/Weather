@@ -1,0 +1,26 @@
+{
+    "ar": {
+        "SearchPlaceHolder": "أبحث عن مكان",
+        "FeelsLike": "تشعر كأنها",
+        "Arabic": "العربية",
+        "English": "الإنجليزية",
+        "now": "الان",
+        "Today": "اليوم",
+        "night": "ليلاً",
+        "10Days": "الطقس في العشرة الأيام المقبلة",
+        "Tomorrow": "غداً",
+        "Pressure": "الضغط",
+        "Humidity": "الرطوبة",
+        "Wind, m/s": "سرعة الرياح، متر/بثانية",
+        "Morning": "صباحاً",
+        "Day": "ظهراً",
+        "Evening": "مساءً"
+    },
+    "en-US": {
+        "SearchPlaceHolder": "Find Location",
+        "FeelsLike": "Feels Like",
+        "10Days": "10 days forecast",
+        "Pressure": "Pressure",
+        "Humidity": "Humidity"
+    }
+}

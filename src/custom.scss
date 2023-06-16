@@ -1,0 +1,37 @@
+@import "../node_modules/bootstrap/scss//functions";
+@import url("https://fonts.googleapis.com/css2?family=Tajawal&display=swap");
+
+// $primary: #29bcb4 !default;
+// $secondary: #b7c2ca;
+// @import "~bootstrap/scss/bootstrap.scss";
+$info: #3078fb;
+$muted: #8491a4;
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+.btn-check:checked + .btn,
+:not(.btn-check) + .btn:active,
+.btn:first-child:active,
+.btn.active,
+.btn.show {
+    color: black;
+    border: none;
+    background-color: inherit;
+    padding: 0;
+}
+.dropdown-toggle {
+    background-color: inherit;
+    color: black;
+    padding: 0;
+    border: none;
+    &:hover {
+        color: black;
+        background-color: inherit;
+        border: none;
+    }
+}
+.dropdown-menu {
+    min-width: auto;
+}
+.dropdown-toggle::after {
+    display: none;
+}

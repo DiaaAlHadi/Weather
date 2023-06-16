@@ -1,0 +1,55 @@
+.bodyLight {
+    background: #F3F4F7;
+}
+
+.today {
+    color: #3078FB !important;
+}
+
+.darkBlue {
+    color: #132842;
+}
+
+.darkBlueBg {
+    background-color: #132842 !important;
+}
+
+.blueText {
+    color: #3078FB;
+}
+
+.grayText {
+    color: #8491A4
+}
+
+.darkGrayText {
+    color: #637995 !important
+}
+
+.lightGrayBg {
+    background-color: #C1CCDD;
+}
+
+/* Target the arrow icon */
+.slick-prev::before,
+.slick-next::before {
+    content: "";
+    background: none !important;
+    color: #b67878 !important;
+    font-size: 33px !important;
+}
+
+.slick-prev::before {
+    z-index: 1;
+    left: -10px !important;
+}
+
+.slick-next:before {
+    right: 0 !important;
+}
+
+/* Optional: add hover effects */
+.slick-prev:hover::before,
+.slick-next:hover::before {
+    color: #FFFFFF;
+}
