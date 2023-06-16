@@ -80,23 +80,6 @@ export default function Navbar(props) {
                         </button>
                     </div>
                 </div>
-
-                {/* <button
-                    onClick={() => {
-                        props.set((prev) => ({...prev, Dark: !prev.Dark}));
-                    }}
-                    className="btn btn-warning"
-                >
-                    CLick Me
-                </button>
-                <button
-                    onClick={() => {
-                        props.set((prev) => ({...prev, Unit: prev.Unit === "f" ? "c" : "f"}));
-                    }}
-                    className="btn btn-primary"
-                >
-                    CLick Me
-                </button> */}
             </div>
         </nav>
     );

@@ -47,6 +47,5 @@ Card.defaultProps = {
     Header: false,
     Img: true,
     Footer: false,
-    // ImgWidth: 80,
     ImgHeight: 60,
 };

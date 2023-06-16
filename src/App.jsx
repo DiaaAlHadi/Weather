@@ -16,7 +16,7 @@ function App() {
     const [search, setSearch] = useState("");
 
     const [model, setModel] = useState({
-        q: "", //temp value
+        q: "",
     });
 
     const [data, setData] = useState({
@@ -42,21 +42,7 @@ function App() {
     useEffect(() => {
         if (search !== "") {
             F_Current.ACTIONS.GetCurrentWeather({q: search, days: 10, lang: control.lang}, (res) => {
-                setData((prev) => ({
-                    ...prev,
-                    CurrentWeather: res.current,
-                    Location: res.location,
-                    Forecast: res.forecast.forecastday,
-                    oneDayWeather: [...res.forecast.forecastday[0].hour, ...res.forecast.forecastday[1].hour]
-                    .filter((item) => new Date(item.time).getHours() >= new Date().getHours())
-                    .slice(0, 24),
-                }));
-            });
-        } else {
-            getLocation()
-            .then((location) => {
-                setModel((prev) => ({...prev, q: location}));
-                F_Current.ACTIONS.GetCurrentWeather({q: location, days: 10, lang: control.lang}, (res) => {
+                if (res)
                     setData((prev) => ({
                         ...prev,
                         CurrentWeather: res.current,
@@ -66,10 +52,26 @@ function App() {
                         .filter((item) => new Date(item.time).getHours() >= new Date().getHours())
                         .slice(0, 24),
                     }));
+            });
+        } else {
+            getLocation()
+            .then((location) => {
+                setModel((prev) => ({...prev, q: location}));
+                F_Current.ACTIONS.GetCurrentWeather({q: location, days: 10, lang: control.lang}, (res) => {
+                    if (res)
+                        setData((prev) => ({
+                            ...prev,
+                            CurrentWeather: res.current,
+                            Location: res.location,
+                            Forecast: res.forecast.forecastday,
+                            oneDayWeather: [...res.forecast.forecastday[0].hour, ...res.forecast.forecastday[1].hour]
+                            .filter((item) => new Date(item.time).getHours() >= new Date().getHours())
+                            .slice(0, 24),
+                        }));
                 });
             })
             .catch((error) => {
-                console.error(error);
+                alert(error)
             });
         }
     }, [control.lang, search]);

@@ -15,13 +15,13 @@ const http = axios.create({
 
 export const Get = async (url, params = {}) => {
    try {
-      const response = await http.get(url, {params});
+      const response = await http.get(url, { params });
       return response.data;
    } catch (error) {
-      console.error(error);
+      alert(error.response.data.error.message)
    }
 };
 
-const https = {Get};
+const https = { Get };
 
 export default https;

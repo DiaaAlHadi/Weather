@@ -2,7 +2,6 @@ import app from "../services/appService";
 import {Forecast, DaySummery, CurrentWCard} from "../components";
 import MapWithClick from "../components/Map";
 export default function Weather(props) {
-    console.log(props);
     let W = app.GetWidth().width;
 
     function CalculateShow(W) {
@@ -39,14 +38,7 @@ export default function Weather(props) {
                     />
                 </div>
                 <div className="col-12 col-md-6" style={{height: W > 767 ? "auto" : "300px"}}>
-                    {props.search.lon && (
-                        <MapWithClick
-                            preLocation={props.search}
-                            onMapClick={(value) => {
-                                console.log(value);
-                            }}
-                        />
-                    )}
+                    {props.search.lon && <MapWithClick preLocation={props.search} />}
                 </div>
             </div>
             <div className="row m-0 my-4">
