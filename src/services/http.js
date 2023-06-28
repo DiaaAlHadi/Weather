@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API_ENDPOINT = "https://api.weatherapi.com/v1";
-const API_KEY = "1cf26c51d8d84e93ab185800231306";
+const API_KEY = "734e29f5cc7b4d2a91a75143232806";
 
 const http = axios.create({
    baseURL: API_ENDPOINT,
